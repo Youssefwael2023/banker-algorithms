@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banker Algorithm</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">   
+</head>
+<body id="bbody">
+
+    <div class="container pt-5">
+        <h2 class="text-center subheading">BANKER ALGORITHM</h2>
+      </div>
+
+
+      <!-- Allocation -->
+      <div class="container container2 pt-5 pb-5">
+        <div class="row">
+          <div class="col-lg-3 col-sm-12 text-center text-light">
+            <table class="text-center text-light">
+              <thead>
+                <tr>
+                  <th colspan="4"><h4>Allocation</h4></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td>A</td>
+                  <td>B</td>
+                  <td>C</td>
+                </tr>
+                <tr>
+                  <td>P0</td>
+                  <td><input size="2" maxlength="2" id="a11"></td>
+                  <td><input size="2" maxlength="2" id="a12"></td>
+                  <td><input size="2" maxlength="2" id="a13"></td>
+                </tr>
+                <tr>
+                  <td>P1</td>
+                  <td><input size="2" maxlength="2" id="a21"></td>
+                  <td><input size="2" maxlength="2" id="a22"></td>
+                  <td><input size="2" maxlength="2" id="a23"></td>
+                </tr>
+                <tr>
+                  <td>P2</td>
+                  <td><input size="2" maxlength="2" id="a31"></td>
+                  <td><input size="2" maxlength="2" id="a32"></td>
+                  <td><input size="2" maxlength="2" id="a33"></td>
+                </tr>
+                <tr>
+                  <td>P3</td>
+                  <td><input size="2" maxlength="2" id="a41"></td>
+                  <td><input size="2" maxlength="2" id="a42"></td>
+                  <td><input size="2" maxlength="2" id="a43"></td>
+                </tr>
+                <tr>
+                  <td>P4</td>
+                  <td><input size="2" maxlength="2" id="a51"></td>
+                  <td><input size="2" maxlength="2" id="a52"></td>
+                  <td><input size="2" maxlength="2" id="a53"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- Allocation  -->
+  
+          <!-- Max  -->
+          <div class="col-lg-3 col-sm-12 text-center text-light  pb-5">
+            <table class="text-center">
+              <thead>
+                <tr>
+                  <th colspan="4"><h4>Maximum</h4></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td>A</td>
+                  <td>B</td>
+                  <td>C</td>
+                </tr>
+                <tr>
+                  <td>P0</td>
+                  <td><input size="2" maxlength="2" id="m11"></td>
+                  <td><input size="2" maxlength="2" id="m12"></td>
+                  <td><input size="2" maxlength="2" id="m13"></td>
+                </tr>
+                <tr>
+                  <td>P1</td>
+                  <td><input size="2" maxlength="2" id="m21"></td>
+                  <td><input size="2" maxlength="2" id="m22"></td>
+                  <td><input size="2" maxlength="2" id="m23"></td>
+                </tr>
+                <tr>
+                  <td>P2</td>
+                  <td><input size="2" maxlength="2" id="m31"></td>
+                  <td><input size="2" maxlength="2" id="m32"></td>
+                  <td><input size="2" maxlength="2" id="m33"></td>
+                </tr>
+                <tr>
+                  <td>P3</td>
+                  <td><input size="2" maxlength="2" id="m41"></td>
+                  <td><input size="2" maxlength="2" id="m42"></td>
+                  <td><input size="2" maxlength="2" id="m43"></td>
+                </tr>
+                <tr>
+                  <td>P4</td>
+                  <td><input size="2" maxlength="2" id="m51"></td>
+                  <td><input size="2" maxlength="2" id="m52"></td>
+                  <td><input size="2" maxlength="2" id="m53"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- Max  -->
+  
+          <!-- Need Form Starts -->
+          <div class="col-lg-3 col-sm-12 text-center text-light  pb-5r ">
+            <table class="text-center">
+              <thead>
+                <tr>
+                  <th colspan="4"><h4>Need</h4></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td>A</td>
+                  <td>B</td>
+                  <td>C</td>
+                </tr>
+                <tr>
+                  <td>P0</td>
+                  <td><input size="2" maxlength="2" id="n11"></td>
+                  <td><input size="2" maxlength="2" id="n12"></td>
+                  <td><input size="2" maxlength="2" id="n13"></td>
+                </tr>
+                <tr>
+                  <td>P1</td>
+                  <td><input size="2" maxlength="2" id="n21"></td>
+                  <td><input size="2" maxlength="2" id="n22"></td>
+                  <td><input size="2" maxlength="2" id="n23"></td>
+                </tr>
+                <tr>
+                  <td>P2</td>
+                  <td><input size="2" maxlength="2" id="n31"></td>
+                  <td><input size="2" maxlength="2" id="n32"></td>
+                  <td><input size="2" maxlength="2" id="n33"></td>
+                </tr>
+                <tr>
+                  <td>P3</td>
+                  <td><input size="2" maxlength="2" id="n41"></td>
+                  <td><input size="2" maxlength="2" id="n42"></td>
+                  <td><input size="2" maxlength="2" id="n43"></td>
+                </tr>
+                <tr>
+                  <td>P4</td>
+                  <td><input size="2" maxlength="2" id="n51"></td>
+                  <td><input size="2" maxlength="2" id="n52"></td>
+                  <td><input size="2" maxlength="2" id="n53"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- Need  -->
+  
+          <!-- Available Form Starts -->
+          <div class="col-lg-3 col-sm-12 text-center text-light  pb-5">
+            <table class="text-center">
+              <thead>
+                <tr>
+                  <th colspan="4"><h4>Available</h4></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td>A</td>
+                  <td>B</td>
+                  <td>C</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td><input size="2" maxlength="2" id="av11"></td>
+                  <td><input size="2" maxlength="2" id="av12"></td>
+                  <td><input size="2" maxlength="2" id="av13"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- Available  -->
+        </div>
+  
+        <!-- Algo Buttons Starts -->
+        <div class="row m-5 text-center">
+          <div class="col-lg-3 col-sm-12">
+            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#howItWorksModal">
+              How It Works
+            </button>
+          </div>
+          <div class="col-lg-3 col-sm-12">
+            <a href="#" class="btn btn-secondary" onclick="example()">Example</a>
+          </div>
+          <div class="col-lg-3 col-sm-12">
+            <a href="#" class="btn btn-secondary" onclick="run_algo()">Run Algorithm</a>
+          </div>
+          <div class="col-lg-3 col-sm-12">
+            <a href="#" class="btn btn-secondary" onclick="reset()">Reset Values</a>
+          </div>
+        </div>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="howItWorksModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="howItWorksLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="howItWorksLabel">How It Works</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>The Banker's Algorithm is used to allocate resources safely in a multi-process system. It ensures that the system never enters an unsafe state. Below are the detailed steps:</p>
+                <ol>
+                  <li><strong>Input Initialization:</strong> 
+                    <ul>
+                      <li>Fill the <b>Allocation</b> table with the number of resources currently allocated to each process.</li>
+                      <li>Fill the <b>Maximum</b> table with the maximum resources each process may need.</li>
+                      <li>Fill the <b>Available</b> table with the number of available resources for each type.</li>
+                    </ul>
+                  </li>
+                  <li><strong>Calculate the Need:</strong> For each process, calculate the <b>Need</b> matrix as:
+                    <pre>Need = Maximum - Allocation</pre>
+                  </li>
+                  <li><strong>Check Safety:</strong>
+                    <ul>
+                      <li>Initialize the <b>Work</b> array as a copy of the Available array.</li>
+                      <li>Mark all processes as unfinished.</li>
+                      <li>Find a process whose Need can be satisfied with the current Work array.</li>
+                      <li>If such a process is found:
+                        <ul>
+                          <li>Allocate resources to it temporarily (add its Allocation to Work).</li>
+                          <li>Mark the process as finished.</li>
+                        </ul>
+                      </li>
+                      <li>If no such process is found, the system is unsafe.</li>
+                      <li>Repeat until all processes are finished or no further progress can be made.</li>
+                    </ul>
+                  </li>
+                  <li><strong>Determine Safe Sequence:</strong>
+                    <ul>
+                      <li>If all processes can be finished, the system is in a <b>safe state</b>.</li>
+                      <li>Output the sequence of process execution (Safe Sequence).</li>
+                    </ul>
+                  </li>
+                  <li><strong>If Unsafe:</strong>
+                    <ul>
+                      <li>If no Safe Sequence can be found, the system is in an <b>unsafe state</b>.</li>
+                      <li>Take corrective actions, such as releasing resources or waiting for some processes to finish.</li>
+                    </ul>
+                  </li>
+                </ol>
+                <p>Use the "Run Algorithm" button to execute the above steps automatically and find the Safe Sequence.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Algo Buttons Ends -->
+        
+        <!-- Process Sequence Starts -->
+        <div class="row p-3 mt-3 mb-3 position-relative seq">
+          <div class="col-lg-6 col-sm-12  text-light position-absolute " style="left: 60%; transform: translateX(-50%);" >
+            <h4>Process Sequence :</h4><br>
+            <input id="p1" size="2" maxlength="2"/>&nbsp
+            <input id="p2" size="2" maxlength="2"/>&nbsp
+            <input id="p3" size="2" maxlength="2"/>&nbsp
+            <input id="p4" size="2" maxlength="2"/>&nbsp
+            <input id="p5" size="2" maxlength="2"/>
+          </div>
+        </div>
+        <!-- Process Sequence Ends -->
+      </div>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/script.js"></script>
+</body>
+</html>

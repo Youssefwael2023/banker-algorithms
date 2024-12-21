@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    background-color: rgb(31, 31, 49) ;
+    font-family: 'Montserrat', sans-serif;
+
+  }
+  
+  .subheading{
+    font-size: 48px;
+    line-height: 59px;
+    color: #69e4ff;
+    position: relative;
+    text-align: center;
+  }
+  .subheading::after{
+    content: "";
+    width: 300px;
+    height: 5px;
+    background-color: #8baeb6;
+    position: absolute;
+    top: 80px !important;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+
+
+  
+  table input{
+    padding: 8px;
+    border: #69e4ff 1px solid;
+    border-radius: 10%;
+    color: rgb(0, 0, 0) !important;
+    font-weight: bold;
+    max-width: 70px;  
+  }
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .container2 {
+    padding: 20px;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Ensures content is centered on mobile */
+  }
+  
+  .col-lg-3,
+  .col-sm-12 {
+    flex: 1;
+    max-width: 250px; /* ensures a max width for each column */
+    margin: 10px;
+  } 
+  .text-center {
+    text-align: center;
+  }
+  button {
+    background-color: #69e4ff;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #5a98c5;
+  }  
+  td,
+  th{
+    padding: 5px;
+  }
+
+  @media screen and (max-width: 900px) {
+    .subheading{
+      font-size: 30px;
+    }
+    .subheading::after{
+      width: 200px;
+    }
+   .container2{
+    width: 100%;
+    padding: 15px;
+
+   }
+   .col-lg-3 {
+    max-width: 100%; /* make columns stack on smaller screens */
+    margin: 10px 0;
+  }
+  .btn {
+    margin: 10px auto;
+    display: block;
+  }
+
+  table {
+    width: 100%;
+  }
+   .container2 .btn {
+    position: relative;
+    right: 0px;
+    margin-bottom: 20px;
+   }
+   
+
+  }
